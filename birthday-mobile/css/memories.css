@@ -6,11 +6,16 @@
 .fp-slidesNav ul li a span {
     border-color:#fff;
 }
-/*img{  
+img{  
 	display: inline-block;
 	height: auto;
-	max-width: 100%; 
-}*/
+	max-width: 90%;
+	max-height: 90%;
+	object-fit: cover;
+	border-radius: 8px;
+	margin: 5px;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
 .bgcolor {
 	background: #ee9ca7;
     background: -webkit-linear-gradient(top left, #ee9ca7 0%, #ee9ca7 100%);
@@ -947,10 +952,11 @@
 		position: absolute;
 		bottom: 0;
 		width: 100%;
-		height: 70%;
+		height: auto;
+		max-height: 90%;
 		border-radius: 8px;
 		opacity:0;
-		overflow: hidden;
+		overflow: visible;
 		transition:all 0.5s;
 	}
 	.active .ly-imgbox11{
@@ -1094,10 +1100,11 @@
 		position: absolute;
 		bottom: 0;
 		width: 100%;
-		height: 70%;
+		height: auto;
+		max-height: 90%;
 		border-radius: 8px;
 		opacity:0;
-		overflow: hidden;
+		overflow: visible;
 		transition:all 0.5s;
 	}
 	.active .ly-imgbox11{
@@ -3321,10 +3328,10 @@
 	position: absolute;
 	bottom: 0;
 	width: 100%;
-	height: 80%;
+	height: 100%;
 	border-radius: 8px;
 	opacity:0;
-	overflow: hidden;
+	overflow: visible;
 	transition:all 0.5s;
 }
 .active .ly-imgbox93{
