@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+ <title>我们的回忆</title>
+ <style>
+   body {
+     font-family: "Microsoft YaHei", sans-serif;
+     line-height: 1.6;
+     margin: 0;
+     padding: 0;
+     height: 100vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     background-color: #f9dde4;
+   }
+   
+   .card-container {
+     width: 340px;
+     height: 600px;
+     background-color: #f9dde4;
+     position: relative;
+     overflow: hidden;
+   }
+   
+   .card-content {
+     width: 280px;
+     height: 520px;
+     background-color: #fff;
+     margin: 40px auto;
+     padding: 25px 20px;
+     box-shadow: 0 0 10px rgba(0,0,0,0.08);
+     position: relative;
+     overflow-y: auto;
+     border-radius: 0;
+   }
+   
+   .date {
+     color: #333;
+     font-size: 16px;
+     font-weight: bold;
+     margin-bottom: 18px;
+     display: flex;
+     align-items: center;
+   }
+   
+   .date-icon {
+     margin-right: 5px;
+     font-size: 16px;
+   }
+   
+   .content {
+     font-size: 14px;
+     color: #333;
+     line-height: 1.8;
+   }
+   
+   .content p {
+     margin: 12px 0;
+   }
+   
+   /* 添加左侧小圆点装饰 */
+   .dots {
+     position: absolute;
+     left: 8px;
+     top: 50px;
+     height: 500px;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-around;
+   }
+   
+   .dot {
+     width: 5px;
+     height: 5px;
+     background-color: white;
+     border-radius: 50%;
+     opacity: 0.8;
+   }
+   
+   /* 调整滚动条样式 */
+   .card-content::-webkit-scrollbar {
+     width: 3px;
+   }
+   
+   .card-content::-webkit-scrollbar-track {
+     background: #f1f1f1;
+   }
+   
+   .card-content::-webkit-scrollbar-thumb {
+     background: #ffb6c1;
+     border-radius: 10px;
+   }
+   
+   /* 让文字看起来更接近图片 */
+   .content {
+     font-size: 14px;
+     letter-spacing: 0.5px;
+   }
+ </style>
+</head>
+<body>
+  <div class="card-container">
+    <!-- 左侧小圆点 -->
+    <div class="dots">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+    
+    <div class="card-content">
+      <div class="date">
+        <span class="date-icon">🏠</span>2017年8月11日
+      </div>
+      <div class="content">
+        <p>那年夏天的蝉鸣还在耳边</p>
+        <p>我们相识于校园，一切都充满了梦幻。</p>
+        <p>当时，通过附近人的功能，我们无意间添加了彼此。</p>
+        <p>那时的你，在餐厅勤工俭学，过着充实的校园生活；</p>
+        <p>而我，还是个爱玩的少年，整日与各种女孩聊天、打游戏，和宿舍好友四处瞎逛。直到网络把我们牵到了一起。我也不明白，自己当时哪来的勇气，竟直接决定与你见面。</p>
+        <p>那天晚上，夜色深沉，只有微弱的月光洒落。我在操场绕了好几圈，旁人都不知道，我是在等待结束餐厅勤工俭学的你。终于，我们在旗杆下碰面了。夜色笼罩着我们，我打了声招呼，一时有些不知所措。随后，我们便一同前往观众台，决定在那儿坐下。就这样，我生命中最重要且浪漫的爱情，悄然拉开了帷幕。</p>
+        <p>XXXXXXXXXXXXXXXXXXXXXXX</p>
+        <p>XXXXXXXXXXXXXXXXXXXXXXX</p>
+        <p>XXXXXXXXXXXXXXXXXXXXXXX</p>
+        <p>XXXXXXXXXXXXXXXXXXXXXXX</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // 确保页面保持静态，不会发生跳转或动画效果
+      window.onscroll = function() { return false; };
+      document.querySelector('.card-content').style.opacity = '1';
+    });
+  </script>
+</body>
+</html> 

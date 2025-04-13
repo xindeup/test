@@ -454,30 +454,30 @@ img{
 @media screen and (max-aspect-ratio: 3/4) {
 	.ly-txt01 {
 		position:absolute;
-		width: 40%;
+		width: 45%;
 		left:10%;
 		top:5%;
 	}
 	
 	.ly-txt02 {
 		position:absolute;
-		width: 40%;
-		left:15%;
-		top:50%;
+		width: 80%;
+		left:10%;
+		top:45%;
 	}
 
 	.ly-txt01 p {
-		font-size: 4vw !important;
+		font-size: 3.5vw !important;
 	}
 
 	.ly-txt02 p {
-		font-size: 4vw !important;
+		font-size: 3.5vw !important;
 	}
 }
 
 .ly-stxt01 {
 	font-family: Microsoft YaHei;
-	font-size: 30px;
+	font-size: 24px;
 	font-color: #000;
 	position: relative;
 	left: 5%;
@@ -491,12 +491,12 @@ img{
 
 .ly-stxt02 {
 	font-family: Microsoft YaHei;
-	font-size: 30px;
+	font-size: 24px;
 	font-color: #000;
 	position: relative;
 	left: 5%;
 	top: 5%;
-	margin-top:-71px;
+	margin-top:-60px;
 	opacity: 0;
 	animation:ly-stxt02_move 15s;
 	animation-delay:3s;
@@ -506,13 +506,13 @@ img{
 
 .ly-stxt03 {
 	font-family: Microsoft YaHei;
-	font-size: 30px;
+	font-size: 24px;
 	font-color: #000;
 	position: relative;
 	left: 5%;
 	top: 5%;
 	opacity: 0;
-	margin-top:-71px;
+	margin-top:-60px;
 	animation:ly-stxt03_move 15s;
 	animation-delay:3s;
 	-webkit-animation:ly-stxt03_move 15s;
@@ -521,13 +521,13 @@ img{
 
 .ly-stxt04 {
 	font-family: Microsoft YaHei;
-	font-size: 30px;
+	font-size: 24px;
 	font-color: #000;
 	position: relative;
 	left: 5%;
 	top: 5%;
 	opacity: 0;
-	margin-top:-71px;
+	margin-top:-60px;
 	animation:ly-stxt04_move 15s;
 	animation-delay:3s;
 	-webkit-animation:ly-stxt04_move 15s;
@@ -536,13 +536,13 @@ img{
 
 .ly-stxt05 {
 	font-family: Microsoft YaHei;
-	font-size: 30px;
+	font-size: 24px;
 	font-color: #000;
 	position: relative;
 	left: 5%;
 	top: 5%;
 	opacity: 0;
-	margin-top:-71px;
+	margin-top:-60px;
 	animation:ly-stxt05_move 15s;
 	animation-delay:3s;
 	-webkit-animation:ly-stxt05_move 15s;
@@ -551,7 +551,7 @@ img{
 
 .ly-stxt06 {
 	font-family: Microsoft YaHei;
-	font-size: 30px;
+	font-size: 22px;
 	font-color: #000;
 	position: relative;
 	right: 5%;
@@ -565,13 +565,13 @@ img{
 
 .ly-stxt07 {
 	font-family: Microsoft YaHei;
-	font-size: 30px;
+	font-size: 22px;
 	font-color: #000;
 	position: relative;
 	right: 5%;
 	top: 5%;
 	opacity: 0;
-	margin-top:-71px;
+	margin-top:-55px;
 	animation:ly-stxt07_move 15s;
 	animation-delay:3s;
 	-webkit-animation:ly-stxt07_move 15s;
@@ -580,13 +580,13 @@ img{
 
 .ly-stxt08 {
 	font-family: Microsoft YaHei;
-	font-size: 30px;
+	font-size: 22px;
 	font-color: #000;
 	position: relative;
 	right: 5%;
 	top: 5%;
 	opacity: 0;
-	margin-top:-71px;
+	margin-top:-55px;
 	animation:ly-stxt08_move 15s;
 	animation-delay:3s;
 	-webkit-animation:ly-stxt08_move 15s;
@@ -595,13 +595,13 @@ img{
 
 .ly-stxt09 {
 	font-family: Microsoft YaHei;
-	font-size: 30px;
+	font-size: 22px;
 	font-color: #000;
 	position: relative;
 	right: 5%;
 	top: 5%;
 	opacity: 0;
-	margin-top:-71px;
+	margin-top:-55px;
 	animation:ly-stxt09_move 15s;
 	animation-delay:3s;
 	-webkit-animation:ly-stxt09_move 15s;
@@ -610,13 +610,13 @@ img{
 
 .ly-stxt10 {
 	font-family: Microsoft YaHei;
-	font-size: 30px;
+	font-size: 22px;
 	font-color: #000;
 	position: relative;
 	right: 5%;
 	top: 5%;
 	opacity: 0;
-	margin-top:-71px;
+	margin-top:-55px;
 	animation:ly-stxt10_move 15s;
 	animation-delay:3s;
 	-webkit-animation:ly-stxt10_move 15s;

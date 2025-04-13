@@ -14,11 +14,32 @@ html, body {
     display: block;
     position: relative;
     left:50%;
-    margin-top: -10em;
+    margin-top: 0;
     margin-bottom: 0;
     margin-left: -100px;
-	z-index: 100;
+    z-index: 100;
+}
 
+#cake:before, #cake:after {
+    content: '';
+    position: absolute;
+    width: 120%;
+    height: 60px;
+    background: 
+        radial-gradient(circle at 50% 0, transparent 10px, rgba(255,255,255,0.8) 10px) -10px 0/20px 20px repeat-x,
+        radial-gradient(circle at 50% 100%, transparent 10px, rgba(255,255,255,0.8) 10px) -10px 0/20px 20px repeat-x;
+    left: -10%;
+    z-index: -1;
+}
+
+#cake:before {
+    top: -30px;
+    transform: rotate(2deg);
+}
+
+#cake:after {
+    bottom: -30px;
+    transform: rotate(-2deg);
 }
 
 /* ============================================== Candle
@@ -27,28 +48,83 @@ html, body {
     width: 100%;
     height: 100%;
     background: #ee9ca7;
-    background: -webkit-linear-gradient(top left, #ee9ca7 0%, #ee9ca7 100%);
-    background: linear-gradient(to bottom right, #ee9ca7 0%, #ee9ca7 100%);
+    background: -webkit-linear-gradient(top left, #ffdde1 0%, #ee9ca7 100%);
+    background: linear-gradient(to bottom right, #ffdde1 0%, #ee9ca7 100%);
+    animation: bg-color 10s infinite;
+}
+
+@keyframes bg-color {
+    0%, 100% {
+        background: linear-gradient(to bottom right, #ffdde1 0%, #ee9ca7 100%);
+    }
+    50% {
+        background: linear-gradient(to bottom right, #ee9ca7 0%, #ffdde1 100%);
+    }
 }
 
 .velas {
     background: #ffffff;
     border-radius: 10px;
     position: relative;
-    top: 247px;
-    margin-left: 49.5%;
-    width: 5px;
+    top: -150px;
+    margin-left: 48%;
+    width: 35px;
     height: 35px;
-    -webkit-transform: translateY(-300px);
-    -ms-transform: translateY(-300px);
-    transform: translateY(-300px);
+    background: linear-gradient(135deg, #ff9ebd 0%, #ff5c8d 100%);
+    transform: rotate(45deg);
+    z-index: 10;
+    box-shadow: 0 2px 15px rgba(255, 92, 141, 0.3);
     -webkit-backface-visibility: hidden;
     -ms-backface-visibility: hidden;
     backface-visibility: hidden;
-    -webkit-animation: in 500ms 6s ease-out forwards;
-    animation: in 500ms 6s ease-out forwards;
+    -webkit-animation: dropCandle 1.5s 6s ease-in forwards;
+    animation: dropCandle 1.5s 6s ease-in forwards;
 }
 
+.velas:before,
+.velas:after {
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background: linear-gradient(135deg, #ff9ebd 0%, #ff5c8d 100%);
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 92, 141, 0.5);
+}
+
+.velas:before {
+    top: -9px;
+    left: 0;
+}
+
+.velas:after {
+    top: 0;
+    left: -9px;
+}
+
+.fuego {
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    margin-left: -7.5px;
+    width: 15px;
+    height: 15px;
+    background: radial-gradient(circle, #ffeb3b 20%, #ff9800 60%, #ff5722 80%);
+    border-radius: 50%;
+    box-shadow: 0 0 20px #ffeb3b, 0 0 40px #ff9800, 0 0 60px #ff5722;
+    animation: flicker 0.8s ease-in-out infinite alternate;
+}
+
+@keyframes flicker {
+    0% {
+        transform: scale(1) rotate(-2deg);
+        box-shadow: 0 0 20px #ffeb3b, 0 0 40px #ff9800, 0 0 60px #ff5722;
+    }
+    100% {
+        transform: scale(1.1) rotate(2deg);
+        box-shadow: 0 0 30px #ffeb3b, 0 0 50px #ff9800, 0 0 70px #ff5722;
+    }
+}
 .velas:after,
 .velas:before {
     background: rgba(255, 0, 0, 0.4);
@@ -73,11 +149,13 @@ html, body {
 .fuego {
     border-radius: 100%;
     position: absolute;
-    top: -20px;
-    left: 70%;
-    margin-left: -2.2px;
-    width: 6.66666667px;
-    height: 18px;
+    top: -35px;
+    left: 50%;
+    margin-left: -3.3px;
+    width: 10px;
+    height: 35px;
+    filter: blur(1px);
+    box-shadow: 0 0 10px #ffeb3b, 0 0 20px #ff9800, 0 0 30px #ff5722;
 }
 
 .fuego:nth-child(1) {
@@ -143,17 +221,37 @@ html, body {
     }
 }
 
-@-webkit-keyframes in {
-    to {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
+@-webkit-keyframes dropCandle {
+    0% {
+        top: -150px;
+        transform: translateY(-150px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(100px) rotate(5deg);
+    }
+    75% {
+        transform: translateY(150px) rotate(-5deg);
+    }
+    100% {
+        top: 50px;
+        transform: translateY(0) rotate(0deg);
     }
 }
 
-@keyframes in {
-    to {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
+@keyframes dropCandle {
+    0% {
+        top: -150px;
+        transform: translateY(-150px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(100px) rotate(5deg);
+    }
+    75% {
+        transform: translateY(150px) rotate(-5deg);
+    }
+    100% {
+        top: 50px;
+        transform: translateY(0) rotate(0deg);
     }
 }
 
@@ -192,6 +290,65 @@ html, body {
     z-index: 1;
 }
 
+.stars, .hearts {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 2;
+}
+
+@keyframes floatStar {
+    0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+    50% { opacity: 1; }
+    100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+}
+
+@keyframes floatHeart {
+    0% { transform: translateY(0) rotate(0deg) scale(1); opacity: 0; }
+    50% { transform: translateY(-50vh) rotate(180deg) scale(1.5); opacity: 1; }
+    100% { transform: translateY(-100vh) rotate(360deg) scale(1); opacity: 0; }
+}
+
+.star, .heart {
+    position: absolute;
+    color: #fff;
+    font-size: 20px;
+    animation: floatStar 8s linear infinite;
+}
+
+.heart {
+    color: #ff9ebd;
+    animation: floatHeart 6s ease-in-out infinite;
+}
+
+.star:nth-child(2n) { left: 20%; animation-delay: 1s; }
+.star:nth-child(3n) { left: 40%; animation-delay: 2s; }
+.star:nth-child(4n) { left: 60%; animation-delay: 3s; }
+.star:nth-child(5n) { left: 80%; animation-delay: 4s; }
+
+.heart:nth-child(2n) { left: 30%; animation-delay: 1.5s; }
+.heart:nth-child(3n) { left: 50%; animation-delay: 2.5s; }
+.heart:nth-child(4n) { left: 70%; animation-delay: 3.5s; }
+.heart:nth-child(5n) { left: 90%; animation-delay: 4.5s; }
+
+.velas {
+    position: relative;
+    background: linear-gradient(135deg, #ff9ebd 0%, #ff5c8d 100%);
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(255, 92, 141, 0.3),
+                inset 2px 2px 5px rgba(255, 255, 255, 0.5),
+                inset -2px -2px 5px rgba(0, 0, 0, 0.1);
+    top: -150px;
+    margin-left: 48%;
+    width: 35px;
+    height: 35px;
+    transform: rotate(45deg);
+    z-index: 10;
+}
+
 .bg-bubbles li {
     position: absolute;
     list-style: none;
@@ -199,7 +356,12 @@ html, body {
     width: 40px;
     height: 40px;
     background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
     bottom: -160px;
+    backdrop-filter: blur(2px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
     -webkit-animation: square 30s infinite;
     animation: square 30s infinite;
     -webkit-transition-timing-function: linear;
@@ -236,7 +398,7 @@ html, body {
 }
 
 .bg-bubbles li:nth-child(5) {
-    left: 70%;
+    left: 50%;
 }
 
 .bg-bubbles li:nth-child(6) {
@@ -460,13 +622,14 @@ html, body {
 .link1, .link2 {
     width: 170px;
     height: 60px;
-    border: 2px solid #fff;
-    -webkit-border: 1px solid #fff;
+    border: 2px solid rgba(255, 255, 255, 0.8);
     border-radius: 30px;
     font-size: 23px;
     text-align: center;
-    background: #ee9ca7;
-    transition: all 0.8s;
+    background: rgba(238, 156, 167, 0.9);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 2px 10px rgba(238, 156, 167, 0.2);
+    transition: all 0.4s ease;
 }
 
 .link2 {
@@ -485,10 +648,11 @@ a.lk1:hover {
 }
 
 .link1:hover {
-    background-color: #fff;
-    background-color: rgba(255, 255, 255, 0, 2);
-    border: 2px solid #BBB;
-    transition: all 0.8s;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 2px solid rgba(238, 156, 167, 0.5);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(238, 156, 167, 0.4);
+    transition: all 0.4s ease;
 }
 
 a.lk2:hover {
@@ -497,8 +661,9 @@ a.lk2:hover {
 }
 
 .link2:hover {
-    background-color: #fff;
-    background-color: rgba(255, 255, 255, 0, 2);
-    border: 2px solid #BBB;
-    transition: all 0.8s;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 2px solid rgba(238, 156, 167, 0.5);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(238, 156, 167, 0.4);
+    transition: all 0.4s ease;
 }

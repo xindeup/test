@@ -1,0 +1,133 @@
+/* 确保所有内容默认显示 */
+body, body *, .section, .section * {
+	opacity: 1 !important;
+	height: auto !important;
+	overflow: visible !important;
+}
+
+/* 特别处理第一屏 */
+.ly-box01, .ly-box01 * {
+	opacity: 1 !important;
+	height: auto !important;
+	margin-top: 0 !important;
+	animation: none !important;
+	-webkit-animation: none !important;
+	transition: none !important;
+}
+
+/* 处理图文内容 */
+.ly-stxt01, .ly-stxt02, .ly-stxt03, .ly-stxt04, .ly-stxt05,
+.ly-stxt06, .ly-stxt07, .ly-stxt08, .ly-stxt09, .ly-stxt10 {
+	opacity: 1 !important;
+	margin-top: 0 !important;
+	animation: none !important;
+	-webkit-animation: none !important;
+}
+
+/* 修改所有文本元素使其直接显示 */
+[class^="ly-txt"] {
+	opacity: 1 !important;
+	height: auto !important;
+	transition: none !important;
+}
+
+.active [class^="ly-txt"], .keep-active [class^="ly-txt"] {
+	opacity: 1 !important;
+	height: auto !important;
+	transition: none !important;
+	animation: none !important;
+	-webkit-animation: none !important;
+}
+
+/* 确保所有图片容器也直接显示 */
+[class^="ly-imgbox"] {
+	opacity: 1 !important;
+	height: auto !important;
+	transition: none !important;
+}
+
+.active [class^="ly-imgbox"], .keep-active [class^="ly-imgbox"] {
+	opacity: 1 !important;
+	height: auto !important;
+	transition: none !important;
+}
+
+/* 时间轴直接显示 */
+.timeline, .timepoint {
+	opacity: 1 !important;
+	height: 100% !important;
+	top: 0 !important;
+	transition: none !important;
+}
+
+.active .timeline, .keep-active .timeline,
+.active .timepoint, .keep-active .timepoint {
+	opacity: 1 !important;
+	height: 100% !important;
+	top: 0 !important;
+	transition: none !important;
+	}
+	
+	.active .ly-txt11 {
+		opacity: 1;
+		transition-delay: 3.5s;
+	}
+	
+	
+	.ly-txt12 {
+		font-family: Microsoft YaHei;
+		font-size: 20px;
+		text-indent:2em;
+		font-color: #000;
+		position: absolute;
+		padding-top: 20px;
+		left: 5%;
+		top: 12%;
+		opacity: 0;
+		transition: all 1s;
+	}
+	
+	.active .ly-txt12 {
+		opacity: 1;
+		transition-delay: 4s;
+	}
+	
+	
+	/*文本*/
+	.ly-txt13 {
+		font-family: Microsoft YaHei;
+		font-size: 30px;
+		text-shadow: 1px;
+		font-color: #000;
+		position: absolute;
+		left: 3%;
+		top: 4%;
+		opacity: 0;
+		transition: all 0.5s;
+	}
+	
+	.active .ly-txt13 {
+		opacity: 1;
+		transition-delay: 6s;
+	}
+	
+	.ly-txt14 {
+		text-indent:2em;
+		font-family: Microsoft YaHei;
+		font-size: 18px;
+		font-color: #000;
+		position: absolute;
+		margin-left:30px;
+		margin-right:30px;
+		top: 12%;
+		opacity: 1;
+		transition: all 13s;
+		height:0;
+		width:88%;
+		overflow:hidden;
+	}
+	
+	.active .ly-txt14 {
+		height:500px;
+		transition-delay: 6.5s;
+}
